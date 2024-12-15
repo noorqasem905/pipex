@@ -30,7 +30,7 @@ void	parent_file(int *p_fd, char **file, char **enpv)
 	int		fd;
 
 	fd = open_file(file[4], 1);
-	if (fd)
+	if (fd == -1)
 	{
 		close(p_fd[1]);
 		exit(1);
@@ -47,7 +47,7 @@ void	child_file(int *p_fd, char **file, char **enpv)
 	int		fd2;
 
 	fd2 = open_file(file[1], 0);
-	if (fd)
+	if (fd2 == -1)
 	{
 		close(p_fd[0]);
 		exit(2);
