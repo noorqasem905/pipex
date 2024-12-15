@@ -8,3 +8,5 @@ and looks like this:
 
 <pre>$> ./pipex file1 cmd1 cmd2 file2</pre>
 All errors like: wrong commands, permission to files and etc, need be handle.
+#Evaluated by moulinette
+![image](https://github.com/user-attachments/assets/60aff423-7c72-4f16-9274-bbebc87fb2c8)
