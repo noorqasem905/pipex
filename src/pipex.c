@@ -37,9 +37,9 @@ void	parent_file(int *p_fd, char **file, char **enpv)
 	}
 	dup2(fd, 1);
 	dup2(p_fd[0], 0);
-	close(fd);
 	close(p_fd[1]);
 	ft_execve(file[3], enpv);
+	close(fd);
 }
 
 void	child_file(int *p_fd, char **file, char **enpv)
@@ -55,8 +55,8 @@ void	child_file(int *p_fd, char **file, char **enpv)
 	dup2(fd2, 0);
 	dup2(p_fd[1], 1);
 	close(p_fd[0]);
-	close(fd2);
 	ft_execve(file[2], enpv);
+	close(fd2);
 }
 
 int	main(int argc, char *argv[], char **env)
